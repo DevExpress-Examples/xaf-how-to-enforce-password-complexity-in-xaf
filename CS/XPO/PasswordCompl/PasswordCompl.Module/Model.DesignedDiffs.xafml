@@ -1,11 +1,24 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="PasswordCompl">
+  <ActionDesign>
+    <Actions>
+      <Action Id="DialogOK" ValidationContexts="ChangePassword" />
+    </Actions>
+  </ActionDesign>
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
   </BOModel>
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="23.1.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Validation>
+    <Rules>
+      <RuleRegularExpression Id="complexPassword" TargetType="DevExpress.ExpressApp.Security.ChangePasswordOnLogonParameters" TargetPropertyName="NewPassword" TargetContextIDs="ChangePassword" SkipNullOrEmptyValues="False" Pattern="^(?=.*[a-zA-Z])(?=.*\d).{6,}$" MessageTemplateMustMatchPattern="“New password must consist of at least 6 alphanumeric characters.”" IsNewNode="True" />
+    </Rules>
+  </Validation>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
   </Views>
