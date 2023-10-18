@@ -1,10 +1,9 @@
-﻿Imports System
 Imports System.ComponentModel
-
 Imports DevExpress.ExpressApp
 
 Namespace Solution161.Module.Web
-    <ToolboxItemFilter("Xaf.Platform.Web")> _
+
+    <ToolboxItemFilter("Xaf.Platform.Web")>
     Public NotInheritable Partial Class Solution161AspNetModule
         Inherits ModuleBase
 

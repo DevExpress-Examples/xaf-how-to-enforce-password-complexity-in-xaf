@@ -1,5 +1,7 @@
-﻿Namespace Solution161.Win
-    Partial Public Class Solution161WindowsFormsApplication
+Namespace Solution161.Win
+
+    Partial Class Solution161WindowsFormsApplication
+
         ''' <summary> 
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Component Designer generated code"
-
+'#Region "Component Designer generated code"
         ''' <summary> 
         ''' Required method for Designer support - do not modify 
         ''' the contents of this method with the code editor.
@@ -25,8 +27,8 @@
         Private Sub InitializeComponent()
             Me.module1 = New DevExpress.ExpressApp.SystemModule.SystemModule()
             Me.module2 = New DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule()
-            Me.module3 = New Solution161.Module.Solution161Module()
-            Me.module4 = New Solution161.Module.Win.Solution161WindowsFormsModule()
+            Me.module3 = New Solution161.[Module].Solution161Module()
+            Me.module4 = New Solution161.[Module].Win.Solution161WindowsFormsModule()
             Me.module5 = New DevExpress.ExpressApp.Validation.ValidationModule()
             Me.module6 = New DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule()
             Me.module7 = New DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule()
@@ -34,7 +36,7 @@
             Me.sqlConnection1 = New System.Data.SqlClient.SqlConnection()
             Me.securityComplex1 = New DevExpress.ExpressApp.Security.SecurityComplex()
             Me.authenticationStandard1 = New DevExpress.ExpressApp.Security.AuthenticationStandard()
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me), System.ComponentModel.ISupportInitialize).BeginInit()
             ' 
             ' module5
             ' 
@@ -69,22 +71,31 @@
             Me.Modules.Add(Me.module7)
             Me.Modules.Add(Me.securityModule1)
             Me.Security = Me.securityComplex1
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).EndInit()
-
+            AddHandler Me.DatabaseVersionMismatch, New System.EventHandler(Of DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs)(AddressOf Me.Solution161WindowsFormsApplication_DatabaseVersionMismatch)
+            CType((Me), System.ComponentModel.ISupportInitialize).EndInit()
         End Sub
 
-        #End Region
-
+'#End Region
         Private module1 As DevExpress.ExpressApp.SystemModule.SystemModule
+
         Private module2 As DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule
-        Private module3 As Solution161.Module.Solution161Module
-        Private module4 As Solution161.Module.Win.Solution161WindowsFormsModule
+
+        Private module3 As Solution161.[Module].Solution161Module
+
+        Private module4 As Solution161.[Module].Win.Solution161WindowsFormsModule
+
         Private module5 As DevExpress.ExpressApp.Validation.ValidationModule
+
         Private module6 As DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule
+
         Private module7 As DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule
+
         Private securityModule1 As DevExpress.ExpressApp.Security.SecurityModule
+
         Private sqlConnection1 As System.Data.SqlClient.SqlConnection
+
         Private securityComplex1 As DevExpress.ExpressApp.Security.SecurityComplex
+
         Private authenticationStandard1 As DevExpress.ExpressApp.Security.AuthenticationStandard
     End Class
 End Namespace

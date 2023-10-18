@@ -1,23 +1,22 @@
-﻿Imports System
-
+Imports System
 Imports DevExpress.ExpressApp.Updating
-Imports DevExpress.Xpo
 Imports DevExpress.Data.Filtering
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.ExpressApp.Security
 Imports DevExpress.ExpressApp
 
 Namespace Solution161.Module
+
     Public Class Updater
         Inherits ModuleUpdater
 
         Public Sub New(ByVal objectSpace As IObjectSpace, ByVal currentDBVersion As Version)
             MyBase.New(objectSpace, currentDBVersion)
         End Sub
+
         Public Overrides Sub UpdateDatabaseAfterUpdateSchema()
             MyBase.UpdateDatabaseAfterUpdateSchema()
-
-'            #Region "Create Users for the Complex Security Strategy"
+'#Region "Create Users for the Complex Security Strategy"
             ' If a user named 'Sam' doesn't exist in the database, create this user
             Dim user1 As User = ObjectSpace.FindObject(Of User)(New BinaryOperator("UserName", "Sam"))
             If user1 Is Nothing Then
@@ -27,6 +26,7 @@ Namespace Solution161.Module
                 ' Set a password if the standard authentication type is used
                 user1.SetPassword("")
             End If
+
             ' If a user named 'John' doesn't exist in the database, create this user
             Dim user2 As User = ObjectSpace.FindObject(Of User)(New BinaryOperator("UserName", "John"))
             If user2 Is Nothing Then
@@ -36,25 +36,30 @@ Namespace Solution161.Module
                 ' Set a password if the standard authentication type is used
                 user2.SetPassword("")
             End If
+
             ' If a role with the Administrators name doesn't exist in the database, create this role
             Dim adminRole As Role = ObjectSpace.FindObject(Of Role)(New BinaryOperator("Name", "Administrators"))
             If adminRole Is Nothing Then
                 adminRole = ObjectSpace.CreateObject(Of Role)()
                 adminRole.Name = "Administrators"
             End If
+
             ' If a role with the Users name doesn't exist in the database, create this role
             Dim userRole As Role = ObjectSpace.FindObject(Of Role)(New BinaryOperator("Name", "Users"))
             If userRole Is Nothing Then
                 userRole = ObjectSpace.CreateObject(Of Role)()
                 userRole.Name = "Users"
             End If
+
             ' Delete all permissions assigned to the Administrators and Users roles
-            Do While adminRole.PersistentPermissions.Count > 0
+            While adminRole.PersistentPermissions.Count > 0
                 ObjectSpace.Delete(adminRole.PersistentPermissions(0))
-            Loop
-            Do While userRole.PersistentPermissions.Count > 0
+            End While
+
+            While userRole.PersistentPermissions.Count > 0
                 ObjectSpace.Delete(userRole.PersistentPermissions(0))
-            Loop
+            End While
+
             ' Allow full access to all objects to the Administrators role
             adminRole.AddPermission(New ObjectAccessPermission(GetType(Object), ObjectAccess.AllAccess))
             ' Deny editing access to the AuditDataItemPersistent type objects to the Administrators role
@@ -81,7 +86,7 @@ Namespace Solution161.Module
             user1.Save()
             user2.Save()
             ObjectSpace.CommitChanges()
-'            #End Region
+'#End Region
         End Sub
     End Class
 End Namespace
