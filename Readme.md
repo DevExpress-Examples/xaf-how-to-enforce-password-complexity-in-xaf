@@ -4,6 +4,7 @@
 <!-- default badges end -->
 # How to enforce password complexity in XAF
 This example shows how to validate passwords in XAF apps.
+![image](https://github.com/DevExpress-Examples/XAF_how-to-enforce-password-complexity-in-xaf-e2849/assets/14300209/522c4ee7-66b1-4579-a7f1-bd012a20237d)
 
 ## Implementation Details
 
