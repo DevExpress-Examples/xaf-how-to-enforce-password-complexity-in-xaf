@@ -6,9 +6,8 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Model.DesignedDiffs.xafml](./CS/Solution161.Module/Model.DesignedDiffs.xafml) (VB: [Model.DesignedDiffs.xafml](./VB/Solution161.Module/Model.DesignedDiffs.xafml))
-* [Module.cs](./CS/Solution161.Module/Module.cs) (VB: [Module.vb](./VB/Solution161.Module/Module.vb))
-* [Updater.cs](./CS/Solution161.Module/Updater.cs) (VB: [Updater.vb](./VB/Solution161.Module/Updater.vb))
+* [Model.DesignedDiffs.xafml](CS/EF/PasswordComplEF/PasswordComplEF.Module/Model.DesignedDiffs.xafml) 
+
 <!-- default file list end -->
 # How to enforce password complexity in XAF
 
