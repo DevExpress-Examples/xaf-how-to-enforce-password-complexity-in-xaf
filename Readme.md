@@ -11,7 +11,7 @@ This example shows how to validate passwords in XAF applications.
 
 ## Implementation Details
 
-The easiest way to do this is to use [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/concepts/application-model/model-editor) to create a special validation rule that checks all new passwords against a regex expression. 
+We recommend that you use [Model Editor](https://docs.devexpress.com/eXpressAppFramework/112582/concepts/application-model/model-editor) to create a special validation rule that checks all new passwords against a regex expression. 
 
 For more information, refer to the following help topic: [Validate Password Complexity](https://docs.devexpress.com/eXpressAppFramework/401909/validation/validate-password-complexity).
 
