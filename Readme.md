@@ -25,7 +25,7 @@ For more information, refer to the following help topic: [Validate Password Comp
 
 * [Validate Password Complexity](https://docs.devexpress.com/eXpressAppFramework/401909/validation/validate-password-complexity)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-how-to-enforce-password-complexity-in-xaf&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-how-to-enforce-password-complexity-in-xaf&~~~was_helpful=no)
 
