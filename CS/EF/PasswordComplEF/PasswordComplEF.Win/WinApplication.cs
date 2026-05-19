@@ -21,7 +21,6 @@ public class PasswordComplEFWindowsFormsApplication : WinApplication {
 		SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
         ApplicationName = "PasswordComplEF";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-        UseOldTemplates = false;
         DatabaseVersionMismatch += PasswordComplEFWindowsFormsApplication_DatabaseVersionMismatch;
         CustomizeLanguagesList += PasswordComplEFWindowsFormsApplication_CustomizeLanguagesList;
     }
